@@ -15,4 +15,4 @@ data/scraped/
 reviewlens_*.csv
 reports/sample_batch_aspects.csv
 # Large user-supplied review datasets
-Dataset/
+Dataset/*.csv
