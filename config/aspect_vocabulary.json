@@ -1,0 +1,20 @@
+{
+  "_comment": "Canonical product aspect -> surface phrases. Matching is case-insensitive, word-boundary aware, allows simple plurals (s/es), treats spaces/hyphens interchangeably, and prefers the longest phrase. Edit freely; the app reloads it on restart. Aspects not listed here are never detected.",
+  "Battery": ["battery life", "battery", "batteries", "charge", "charging", "charger", "power adapter"],
+  "Camera": ["camera", "webcam", "web cam", "lens", "photo quality", "picture quality"],
+  "Display": ["display", "screen", "monitor", "resolution", "brightness", "touchscreen", "touch screen", "panel"],
+  "Performance": ["performance", "speed", "processor", "cpu", "gpu", "graphics card", "graphics", "boot time", "boot up", "startup", "lag", "multitasking", "responsiveness"],
+  "Price": ["price", "cost", "value for money", "value", "money", "worth"],
+  "Design": ["design", "looks", "appearance", "style", "weight", "size", "color", "colour", "form factor"],
+  "Build Quality": ["build quality", "build", "construction", "hinge", "chassis", "body", "durability", "materials", "quality", "sturdiness"],
+  "Keyboard": ["keyboard", "keys", "backlight", "key travel"],
+  "Touchpad": ["touchpad", "touch pad", "trackpad", "track pad", "mouse pad"],
+  "Software": ["software", "operating system", "os", "windows", "windows 8", "windows 10", "windows 11", "mac os", "macos", "android", "ios", "drivers", "bloatware", "apps", "programs", "firmware", "interface"],
+  "Audio": ["speakers", "speaker", "sound", "audio", "volume", "sound quality", "microphone", "mic"],
+  "Storage": ["hard drive", "hard disk", "storage", "ssd", "hdd", "disk space", "memory", "ram"],
+  "Connectivity": ["wifi", "wi-fi", "wireless", "bluetooth", "usb ports", "usb port", "usb", "ports", "hdmi", "connection"],
+  "Heat & Noise": ["fan", "fans", "heat", "overheating", "temperature", "noise"],
+  "Comfort & Usability": ["comfort", "usability", "ease of use", "easy to use", "ergonomics", "fit", "grip"],
+  "Delivery & Packaging": ["delivery", "shipping", "packaging", "packing", "package"],
+  "Customer Service": ["customer service", "customer support", "tech support", "support", "warranty", "service", "seller", "return policy"]
+}

@@ -1,0 +1,32 @@
+{
+  "selected": "logreg",
+  "display_name": "TF-IDF + Logistic Regression",
+  "selection_rule": "Highest macro-F1 on the official validation split (test split not used).",
+  "candidates": {
+    "logreg": {
+      "C": 1.0,
+      "val_macro_f1": 0.6849311497443379,
+      "fit_seconds": 37.677289299987024
+    },
+    "linsvm": {
+      "C": 0.3,
+      "val_macro_f1": 0.6818533349588898,
+      "fit_seconds": 8.029635900020367
+    }
+  },
+  "vectorizer_fit_seconds": 40.50144409999484,
+  "train_examples": 200000,
+  "validation_examples": 5000,
+  "training_data": {
+    "name": "Amazon Reviews Multi (English), SetFit mirror",
+    "url": "https://huggingface.co/datasets/SetFit/amazon_reviews_multi_en",
+    "label_mapping": "stars 1-2 -> negative, 3 -> neutral, 4-5 -> positive (star-derived proxy labels)",
+    "train_label_counts": {
+      "negative": 80000,
+      "positive": 80000,
+      "neutral": 40000
+    }
+  },
+  "has_probabilities": true,
+  "model_file": "review_sentiment.joblib"
+}

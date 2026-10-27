@@ -1,0 +1,18 @@
+.venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.streamlit/secrets.toml
+# Generated artifacts (re-create with the commands in README.md)
+data/processed/
+models/*.joblib
+# Third-party benchmark data: downloaded by the scripts, not committed
+data/raw/*.xml
+data/raw/opinion_lexicon/
+data/raw/amazon_reviews_multi_en/
+# Scraped or uploaded review data and exports: never commit (personal content, site terms)
+data/scraped/
+reviewlens_*.csv
+reports/sample_batch_aspects.csv
+# Large user-supplied review datasets
+Dataset/

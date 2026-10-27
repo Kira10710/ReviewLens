@@ -1,0 +1,73 @@
+{
+  "generated_at": "2026-10-20T18:21:24+00:00",
+  "evaluation_type": "whole-review 3-class sentiment on the official held-out test split",
+  "label_caveat": "Labels are derived from star ratings (1-2 neg, 3 neutral, 4-5 pos); this is a proxy for sentiment, not human-annotated sentiment.",
+  "model": "TF-IDF + Logistic Regression",
+  "selection_rule": "Highest macro-F1 on the official validation split (test split not used).",
+  "validation_macro_f1": 0.6849311497443379,
+  "train_examples": 200000,
+  "validation_examples": 5000,
+  "test_examples": 5000,
+  "test_label_counts": {
+    "negative": 2000,
+    "positive": 2000,
+    "neutral": 1000
+  },
+  "train_label_counts": {
+    "negative": 80000,
+    "positive": 80000,
+    "neutral": 40000
+  },
+  "train_test_identical_texts": 15,
+  "majority_baseline_accuracy": 0.4,
+  "accuracy": 0.7174,
+  "macro_precision": 0.6841348995270026,
+  "macro_recall": 0.684,
+  "macro_f1": 0.6813331941166626,
+  "weighted_f1": 0.7262974046839245,
+  "per_class": {
+    "negative": {
+      "precision": 0.7998924152770307,
+      "recall": 0.7435,
+      "f1": 0.7706659756413579,
+      "support": 2000
+    },
+    "neutral": {
+      "precision": 0.40869565217391307,
+      "recall": 0.517,
+      "f1": 0.4565121412803532,
+      "support": 1000
+    },
+    "positive": {
+      "precision": 0.843816631130064,
+      "recall": 0.7915,
+      "f1": 0.8168214654282766,
+      "support": 2000
+    }
+  },
+  "confusion_matrix": [
+    [
+      1487,
+      421,
+      92
+    ],
+    [
+      282,
+      517,
+      201
+    ],
+    [
+      90,
+      327,
+      1583
+    ]
+  ],
+  "classification_report": "              precision    recall  f1-score   support\n\n    negative     0.7999    0.7435    0.7707      2000\n     neutral     0.4087    0.5170    0.4565      1000\n    positive     0.8438    0.7915    0.8168      2000\n\n    accuracy                         0.7174      5000\n   macro avg     0.6841    0.6840    0.6813      5000\nweighted avg     0.7392    0.7174    0.7263      5000\n",
+  "fit_seconds": 37.677289299987024,
+  "inference_ms_per_review": 0.04724460000288673,
+  "benchmark_files": [
+    "test.jsonl",
+    "train.jsonl",
+    "validation.jsonl"
+  ]
+}

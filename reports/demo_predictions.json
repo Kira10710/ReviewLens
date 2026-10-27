@@ -1,0 +1,508 @@
+{
+  "logreg": [
+    {
+      "review": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+      "aspects": [
+        {
+          "aspect": "Battery",
+          "matched_text": "battery life",
+          "sentence": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+          "context": "The battery life is amazing, easily lasting ten hours",
+          "sentiment": "positive",
+          "score_type": "probability",
+          "confidence": 0.9421100818074851,
+          "scores": {
+            "negative": 0.05483071466691911,
+            "neutral": 0.003059203525595866,
+            "positive": 0.9421100818074851
+          }
+        },
+        {
+          "aspect": "Display",
+          "matched_text": "screen",
+          "sentence": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+          "context": "the screen is too dim outdoors.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.9871193015662674,
+          "scores": {
+            "negative": 0.9871193015662674,
+            "neutral": 0.0006532007800149558,
+            "positive": 0.012227497653717683
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "Keyboard feels cheap and the touchpad is unresponsive. Terrible build quality for this price.",
+      "aspects": [
+        {
+          "aspect": "Keyboard",
+          "matched_text": "Keyboard",
+          "sentence": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "context": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.886208688811589,
+          "scores": {
+            "negative": 0.886208688811589,
+            "neutral": 0.04240132116663006,
+            "positive": 0.07138999002178091
+          }
+        },
+        {
+          "aspect": "Touchpad",
+          "matched_text": "touchpad",
+          "sentence": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "context": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.9439783099713442,
+          "scores": {
+            "negative": 0.9439783099713442,
+            "neutral": 0.0007006215801160528,
+            "positive": 0.05532106844853965
+          }
+        },
+        {
+          "aspect": "Build Quality",
+          "matched_text": "build quality",
+          "sentence": "Terrible build quality for this price.",
+          "context": "Terrible build quality for this price.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.9436291201413384,
+          "scores": {
+            "negative": 0.9436291201413384,
+            "neutral": 0.013418065278734138,
+            "positive": 0.04295281457992756
+          }
+        },
+        {
+          "aspect": "Price",
+          "matched_text": "price",
+          "sentence": "Terrible build quality for this price.",
+          "context": "Terrible build quality for this price.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.8521266285402448,
+          "scores": {
+            "negative": 0.8521266285402448,
+            "neutral": 0.027495095993736847,
+            "positive": 0.1203782754660184
+          }
+        }
+      ],
+      "overall": "Negative",
+      "n_aspects": 4,
+      "message": ""
+    },
+    {
+      "review": "Great performance for gaming and the display is gorgeous. Fans get loud though.",
+      "aspects": [
+        {
+          "aspect": "Performance",
+          "matched_text": "performance",
+          "sentence": "Great performance for gaming and the display is gorgeous.",
+          "context": "Great performance for gaming and the display is gorgeous.",
+          "sentiment": "positive",
+          "score_type": "probability",
+          "confidence": 0.9939458409521493,
+          "scores": {
+            "negative": 0.0017845434631867019,
+            "neutral": 0.0042696155846638755,
+            "positive": 0.9939458409521493
+          }
+        },
+        {
+          "aspect": "Display",
+          "matched_text": "display",
+          "sentence": "Great performance for gaming and the display is gorgeous.",
+          "context": "Great performance for gaming and the display is gorgeous.",
+          "sentiment": "positive",
+          "score_type": "probability",
+          "confidence": 0.9955436797670644,
+          "scores": {
+            "negative": 0.0033288806383818905,
+            "neutral": 0.001127439594553777,
+            "positive": 0.9955436797670644
+          }
+        },
+        {
+          "aspect": "Heat & Noise",
+          "matched_text": "Fans",
+          "sentence": "Fans get loud though.",
+          "context": "Fans get loud",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.9674813491597538,
+          "scores": {
+            "negative": 0.9674813491597538,
+            "neutral": 0.01752897147823004,
+            "positive": 0.014989679362016348
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 3,
+      "message": ""
+    },
+    {
+      "review": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+      "aspects": [
+        {
+          "aspect": "Software",
+          "matched_text": "Windows 11",
+          "sentence": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "context": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "sentiment": "neutral",
+          "score_type": "probability",
+          "confidence": 0.47576924712618757,
+          "scores": {
+            "negative": 0.1043454511976515,
+            "neutral": 0.47576924712618757,
+            "positive": 0.41988530167616084
+          }
+        },
+        {
+          "aspect": "Storage",
+          "matched_text": "SSD",
+          "sentence": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "context": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "sentiment": "neutral",
+          "score_type": "probability",
+          "confidence": 0.45692029953190416,
+          "scores": {
+            "negative": 0.09295661705378648,
+            "neutral": 0.45692029953190416,
+            "positive": 0.4501230834143093
+          }
+        }
+      ],
+      "overall": "Neutral",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "Customer service was rude and refused to honour the warranty.",
+      "aspects": [
+        {
+          "aspect": "Customer Service",
+          "matched_text": "Customer service",
+          "sentence": "Customer service was rude and refused to honour the warranty.",
+          "context": "Customer service was rude and refused to honour the warranty.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.9326575652601634,
+          "scores": {
+            "negative": 0.9326575652601634,
+            "neutral": 0.023834708143693144,
+            "positive": 0.04350772659614357
+          }
+        }
+      ],
+      "overall": "Negative",
+      "n_aspects": 1,
+      "message": ""
+    },
+    {
+      "review": "I love the design and it is very light, however the speakers sound tinny.",
+      "aspects": [
+        {
+          "aspect": "Design",
+          "matched_text": "design",
+          "sentence": "I love the design and it is very light, however the speakers sound tinny.",
+          "context": "I love the design and it is very light",
+          "sentiment": "positive",
+          "score_type": "probability",
+          "confidence": 0.9946035254668868,
+          "scores": {
+            "negative": 0.004231262408898851,
+            "neutral": 0.0011652121242143845,
+            "positive": 0.9946035254668868
+          }
+        },
+        {
+          "aspect": "Audio",
+          "matched_text": "speakers",
+          "sentence": "I love the design and it is very light, however the speakers sound tinny.",
+          "context": "the speakers sound tinny.",
+          "sentiment": "negative",
+          "score_type": "probability",
+          "confidence": 0.7169294243460276,
+          "scores": {
+            "negative": 0.7169294243460276,
+            "neutral": 0.024106608589196006,
+            "positive": 0.2589639670647764
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "My cousin visited yesterday and we ate pizza.",
+      "aspects": [],
+      "overall": "No aspects detected",
+      "n_aspects": 0,
+      "message": "No known product aspect was found. The extractor only recognises phrases in config/aspect_vocabulary.json (e.g. battery, screen, keyboard, price)."
+    }
+  ],
+  "linsvm": [
+    {
+      "review": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+      "aspects": [
+        {
+          "aspect": "Battery",
+          "matched_text": "battery life",
+          "sentence": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+          "context": "The battery life is amazing, easily lasting ten hours",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -0.6148429395543145,
+            "neutral": -1.6816597730450913,
+            "positive": 0.7396143611128321
+          }
+        },
+        {
+          "aspect": "Display",
+          "matched_text": "screen",
+          "sentence": "The battery life is amazing, easily lasting ten hours, but the screen is too dim outdoors.",
+          "context": "the screen is too dim outdoors.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 1.2221636783274308,
+            "neutral": -1.8109673347279536,
+            "positive": -0.8632462416812636
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "Keyboard feels cheap and the touchpad is unresponsive. Terrible build quality for this price.",
+      "aspects": [
+        {
+          "aspect": "Keyboard",
+          "matched_text": "Keyboard",
+          "sentence": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "context": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.3991872093631518,
+            "neutral": -0.7834295652043555,
+            "positive": -0.7686894444891722
+          }
+        },
+        {
+          "aspect": "Touchpad",
+          "matched_text": "touchpad",
+          "sentence": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "context": "Keyboard feels cheap and the touchpad is unresponsive.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 1.0543730866682723,
+            "neutral": -2.1507334317538898,
+            "positive": -0.37648607460871725
+          }
+        },
+        {
+          "aspect": "Build Quality",
+          "matched_text": "build quality",
+          "sentence": "Terrible build quality for this price.",
+          "context": "Terrible build quality for this price.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.6766267036777874,
+            "neutral": -1.088322377456135,
+            "positive": -0.7812061698305566
+          }
+        },
+        {
+          "aspect": "Price",
+          "matched_text": "price",
+          "sentence": "Terrible build quality for this price.",
+          "context": "Terrible build quality for this price.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.40812637814073816,
+            "neutral": -1.133153802359986,
+            "positive": -0.4257917311497157
+          }
+        }
+      ],
+      "overall": "Negative",
+      "n_aspects": 4,
+      "message": ""
+    },
+    {
+      "review": "Great performance for gaming and the display is gorgeous. Fans get loud though.",
+      "aspects": [
+        {
+          "aspect": "Performance",
+          "matched_text": "performance",
+          "sentence": "Great performance for gaming and the display is gorgeous.",
+          "context": "Great performance for gaming and the display is gorgeous.",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -1.656520379114135,
+            "neutral": -1.137204684716132,
+            "positive": 1.3982760581751994
+          }
+        },
+        {
+          "aspect": "Display",
+          "matched_text": "display",
+          "sentence": "Great performance for gaming and the display is gorgeous.",
+          "context": "Great performance for gaming and the display is gorgeous.",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -1.2493766739192356,
+            "neutral": -1.6749836667166478,
+            "positive": 1.3206358279138863
+          }
+        },
+        {
+          "aspect": "Heat & Noise",
+          "matched_text": "Fans",
+          "sentence": "Fans get loud though.",
+          "context": "Fans get loud",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.9037898279260754,
+            "neutral": -0.9248678391826514,
+            "positive": -1.096564351577799
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 3,
+      "message": ""
+    },
+    {
+      "review": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+      "aspects": [
+        {
+          "aspect": "Software",
+          "matched_text": "Windows 11",
+          "sentence": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "context": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -0.847484460557728,
+            "neutral": -0.22380844072543843,
+            "positive": -0.041610048345784134
+          }
+        },
+        {
+          "aspect": "Storage",
+          "matched_text": "SSD",
+          "sentence": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "context": "The laptop comes with Windows 11 preinstalled and a 512GB SSD.",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -0.7614048416684444,
+            "neutral": -0.26154763916930435,
+            "positive": 0.004553325217473925
+          }
+        }
+      ],
+      "overall": "Positive",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "Customer service was rude and refused to honour the warranty.",
+      "aspects": [
+        {
+          "aspect": "Customer Service",
+          "matched_text": "Customer service",
+          "sentence": "Customer service was rude and refused to honour the warranty.",
+          "context": "Customer service was rude and refused to honour the warranty.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.498930923016597,
+            "neutral": -1.1027747344185341,
+            "positive": -0.6825992663847263
+          }
+        }
+      ],
+      "overall": "Negative",
+      "n_aspects": 1,
+      "message": ""
+    },
+    {
+      "review": "I love the design and it is very light, however the speakers sound tinny.",
+      "aspects": [
+        {
+          "aspect": "Design",
+          "matched_text": "design",
+          "sentence": "I love the design and it is very light, however the speakers sound tinny.",
+          "context": "I love the design and it is very light",
+          "sentiment": "positive",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": -1.041714889147329,
+            "neutral": -1.7144483438169549,
+            "positive": 1.4219191612239455
+          }
+        },
+        {
+          "aspect": "Audio",
+          "matched_text": "speakers",
+          "sentence": "I love the design and it is very light, however the speakers sound tinny.",
+          "context": "the speakers sound tinny.",
+          "sentiment": "negative",
+          "score_type": "svm_margin",
+          "confidence": null,
+          "scores": {
+            "negative": 0.3259920730199065,
+            "neutral": -1.2765423679309262,
+            "positive": -0.20235558255135483
+          }
+        }
+      ],
+      "overall": "Mixed",
+      "n_aspects": 2,
+      "message": ""
+    },
+    {
+      "review": "My cousin visited yesterday and we ate pizza.",
+      "aspects": [],
+      "overall": "No aspects detected",
+      "n_aspects": 0,
+      "message": "No known product aspect was found. The extractor only recognises phrases in config/aspect_vocabulary.json (e.g. battery, screen, keyboard, price)."
+    }
+  ]
+}

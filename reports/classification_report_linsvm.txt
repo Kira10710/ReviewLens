@@ -1,0 +1,16 @@
+TF-IDF + Linear SVM - official test split (gold aspects)
+
+              precision    recall  f1-score   support
+
+    negative     0.5412    0.8203    0.6522       128
+     neutral     0.6931    0.4142    0.5185       169
+    positive     0.8542    0.8592    0.8567       341
+
+    accuracy                         0.7335       638
+   macro avg     0.6962    0.6979    0.6758       638
+weighted avg     0.7487    0.7335    0.7261       638
+
+Confusion matrix (rows=true, cols=pred, order=negative, neutral, positive)
+[[105   9  14]
+ [ 63  70  36]
+ [ 26  22 293]]

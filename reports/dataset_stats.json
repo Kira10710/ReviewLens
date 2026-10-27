@@ -1,0 +1,68 @@
+{
+  "source_page": "https://alt.qcri.org/semeval2014/task4/index.php?id=data-and-tools",
+  "splits": {
+    "train": {
+      "file": "Laptop_Train_v2.xml",
+      "mirror_url": "https://raw.githubusercontent.com/davidsbatista/Aspect-Based-Sentiment-Analysis/master/datasets/ABSA-SemEval2014/Laptop_Train_v2.xml",
+      "sha256": "efec2ed73b4efb83b47c697114d800149c558118884afa80362a6e975ba7248c",
+      "checksum_matches_recorded": true,
+      "sentences": 3045,
+      "aspect_terms_all_labels": 2358,
+      "matches_published_counts": true,
+      "label_counts_all": {
+        "positive": 987,
+        "negative": 866,
+        "neutral": 460,
+        "conflict": 45
+      },
+      "conflict_excluded": 45,
+      "aspect_terms_three_class": 2313,
+      "label_counts_three_class": {
+        "positive": 987,
+        "negative": 866,
+        "neutral": 460
+      },
+      "offset_mismatches": 0,
+      "sentences_with_aspects": 1488
+    },
+    "test": {
+      "file": "Laptops_Test_Gold.xml",
+      "mirror_url": "https://raw.githubusercontent.com/AlexYangLi/ABSA_Keras/master/raw_data/semeval14_laptop/Laptops_Test_Gold.xml",
+      "sha256": "aa3a30c9dd7e0eacf9b69e898eb4118a36c1b4f391a30a08dfc41a38d8b8745b",
+      "checksum_matches_recorded": true,
+      "sentences": 800,
+      "aspect_terms_all_labels": 654,
+      "matches_published_counts": true,
+      "label_counts_all": {
+        "positive": 341,
+        "neutral": 169,
+        "negative": 128,
+        "conflict": 16
+      },
+      "conflict_excluded": 16,
+      "aspect_terms_three_class": 638,
+      "label_counts_three_class": {
+        "positive": 341,
+        "neutral": 169,
+        "negative": 128
+      },
+      "offset_mismatches": 0,
+      "sentences_with_aspects": 422
+    }
+  },
+  "train_test_identical_sentences": 1,
+  "lexicon": {
+    "name": "Hu & Liu (2004) Opinion Lexicon",
+    "url": "https://raw.githubusercontent.com/nltk/nltk_data/gh-pages/packages/corpora/opinion_lexicon.zip",
+    "positive_words": 2006,
+    "negative_words": 4783,
+    "checksums_match_recorded": true,
+    "use": "Optional feature view (counts of lexicon words in the aspect context); whether it is used is decided by cross-validation on the training split."
+  },
+  "preprocessing": [
+    "One example per annotated aspect-term occurrence (gold aspect terms and offsets).",
+    "Polarity 'conflict' excluded from the 3-class experiment (count recorded per split).",
+    "Sentences without aspect terms are not used for sentiment classification.",
+    "No deduplication or text normalisation is applied to the raw files; lowercasing and negation marking happen inside the model pipeline."
+  ]
+}

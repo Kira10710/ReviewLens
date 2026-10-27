@@ -1,0 +1,11 @@
+# Tested with Python 3.12.0 on Windows 11 (Python 3.11 is also expected to work).
+streamlit==1.66.0
+pandas==3.0.6
+numpy==2.5.4
+scikit-learn==1.9.1
+plotly==7.1.0
+joblib==1.6.0
+requests==2.34.2
+beautifulsoup4==4.15.0
+pytest==9.1.1
+google-genai==2.31.0

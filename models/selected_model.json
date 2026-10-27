@@ -1,0 +1,6 @@
+{
+  "model": "logreg",
+  "display_name": "TF-IDF + Logistic Regression",
+  "file": "tfidf_logreg.joblib",
+  "selection_rule": "Highest mean 5-fold cross-validated macro-F1 on the training split (test split not used for selection)."
+}

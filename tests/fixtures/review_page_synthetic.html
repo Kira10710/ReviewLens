@@ -1,0 +1,27 @@
+<!-- SYNTHETIC TEST FIXTURE: imitates the markup structure of an Amazon review-list page.
+     The review texts are invented for parser tests and are NOT real customer reviews. -->
+<html><head><title>Amazon.com: Customer reviews: Example Product</title></head><body>
+<div id="cm_cr-review_list">
+ <div id="R1AAAAAAAAAAA1" data-hook="review" class="a-section review aok-relative">
+  <a data-hook="review-title" class="review-title"><i data-hook="review-star-rating" class="a-icon a-icon-star a-star-5"><span class="a-icon-alt">5.0 out of 5 stars</span></i><span>Fixture title one</span></a>
+  <span data-hook="review-date">Reviewed in the United States on March 3, 2024</span>
+  <span data-hook="avp-badge" class="a-size-mini">Verified Purchase</span>
+  <span data-hook="review-body" class="review-text"><span>The display is excellent, but the battery drains too quickly.&nbsp;It&#39;s fine.<br>Second line &amp; more.</span></span>
+ </div>
+ <div id="R2BBBBBBBBBBB2" data-hook="review" class="a-section review">
+  <a data-hook="review-title"><i data-hook="review-star-rating"><span class="a-icon-alt">1.0 out of 5 stars</span></i><span>Fixture title two</span></a>
+  <span data-hook="review-body"><span>Fixture body two with no date and no verified badge.</span></span>
+ </div>
+ <div id="R1AAAAAAAAAAA1" data-hook="review"><!-- duplicate id on purpose -->
+  <a data-hook="review-title"><i data-hook="review-star-rating"><span class="a-icon-alt">5.0 out of 5 stars</span></i><span>Fixture title one</span></a>
+  <span data-hook="review-body"><span>The display is excellent, but the battery drains too quickly.</span></span>
+ </div>
+ <div id="R3CCCCCCCCCCC3" data-hook="review">
+  <span data-hook="review-date">Reviewed in India on 12 January 2023</span>
+  <span data-hook="review-body"><span>Body only, no title and no rating.</span></span>
+ </div>
+ <div id="R4DDDDDDDDDDD4" data-hook="review">
+  <a data-hook="review-title"><span>Empty body review</span></a>
+  <span data-hook="review-body"><span>   </span></span>
+ </div>
+</div></body></html>

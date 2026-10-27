@@ -1,0 +1,41 @@
+{
+  "1429_1.csv": {
+    "rows": 34660,
+    "malformed": 0,
+    "products": 42,
+    "rows_with_text": 34658,
+    "rows_with_rating": 34627,
+    "unique_valid_reviews_after_dedup": 34655,
+    "empty_text_dropped": 2,
+    "duplicates_removed": 3,
+    "retained_without_rating": 33,
+    "dates_parsed": 34616,
+    "secs": 5.6
+  },
+  "Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products.csv": {
+    "rows": 5000,
+    "malformed": 0,
+    "products": 24,
+    "rows_with_text": 5000,
+    "rows_with_rating": 5000,
+    "unique_valid_reviews_after_dedup": 4904,
+    "empty_text_dropped": 0,
+    "duplicates_removed": 96,
+    "retained_without_rating": 0,
+    "dates_parsed": 4904,
+    "secs": 3.6
+  },
+  "Datafiniti_Amazon_Consumer_Reviews_of_Amazon_Products_May19.csv": {
+    "rows": 28332,
+    "malformed": 0,
+    "products": 65,
+    "rows_with_text": 28331,
+    "rows_with_rating": 28332,
+    "unique_valid_reviews_after_dedup": 26252,
+    "empty_text_dropped": 1,
+    "duplicates_removed": 2079,
+    "retained_without_rating": 0,
+    "dates_parsed": 26252,
+    "secs": 11.2
+  }
+}

@@ -1,0 +1,5 @@
+﻿[train] logreg C=1.0: validation macro-F1=0.6849 (fit 37.7s)
+[train] logreg C=4.0: validation macro-F1=0.6751 (fit 46.9s)
+[train] linsvm C=0.1: validation macro-F1=0.6787 (fit 5.6s)
+[train] linsvm C=0.3: validation macro-F1=0.6819 (fit 8.0s)
+[train] selected TF-IDF + Logistic Regression (validation macro-F1 0.6849); saved C:\Prakrut\NLP\ReviewLens\models\review_sentiment.joblib

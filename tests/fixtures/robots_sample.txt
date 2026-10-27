@@ -1,0 +1,10 @@
+# SYNTHETIC TEST FIXTURE: shaped like a real robots.txt (wildcards, Allow overriding Disallow)
+User-agent: *
+Disallow: /gp/cart
+Disallow: /*/product-reviews/
+Disallow: /product-reviews/
+Allow: /product-reviews/public$
+Disallow: /ap/
+
+User-agent: ReviewLens
+Disallow: /secret/

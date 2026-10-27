@@ -1,0 +1,16 @@
+TF-IDF + Logistic Regression - official test split (gold aspects)
+
+              precision    recall  f1-score   support
+
+    negative     0.5532    0.8125    0.6582       128
+     neutral     0.6667    0.4615    0.5455       169
+    positive     0.8559    0.8358    0.8457       341
+
+    accuracy                         0.7320       638
+   macro avg     0.6919    0.7033    0.6831       638
+weighted avg     0.7450    0.7320    0.7286       638
+
+Confusion matrix (rows=true, cols=pred, order=negative, neutral, positive)
+[[104  12  12]
+ [ 55  78  36]
+ [ 29  27 285]]

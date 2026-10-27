@@ -1,0 +1,41 @@
+{
+  "status": "blocked",
+  "message": "Amazon returned a CAPTCHA / robot-check page. ReviewLens does not solve or bypass CAPTCHAs. No reviews were collected.",
+  "stats": {
+    "pages_attempted": 2,
+    "pages_parsed": 0,
+    "reviews_extracted": 0,
+    "duplicates_removed": 0,
+    "dropped_empty": 0,
+    "retained": 0
+  },
+  "asin": "B0BDHWDR12",
+  "started_at": "2026-10-20T18:24:24+00:00",
+  "finished_at": "2026-10-20T18:24:29+00:00",
+  "pages": [
+    {
+      "url": "https://www.amazon.com/robots.txt",
+      "kind": "robots.txt",
+      "outcome": "ok",
+      "http_status": 200,
+      "reviews_extracted": 0,
+      "note": "137 rules loaded"
+    },
+    {
+      "url": "https://www.amazon.com/dp/B0BDHWDR12",
+      "kind": "product_page",
+      "outcome": "unrecognized_layout",
+      "http_status": 200,
+      "reviews_extracted": 0,
+      "note": "The page loaded but its layout was not recognised (reviews may be rendered by JavaScript or the markup differs from what this parser supports)."
+    },
+    {
+      "url": "https://www.amazon.com/product-reviews/B0BDHWDR12/?pageNumber=1&reviewerType=all_reviews",
+      "kind": "review_page",
+      "outcome": "captcha",
+      "http_status": 404,
+      "reviews_extracted": 0,
+      "note": "Amazon returned a CAPTCHA / robot-check page. ReviewLens does not solve or bypass CAPTCHAs."
+    }
+  ]
+}

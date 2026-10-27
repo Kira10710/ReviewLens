@@ -1,0 +1,155 @@
+{
+  "generated_at": "2026-10-20T17:53:00+00:00",
+  "evaluation_type": "gold-aspect sentiment classification on official test split",
+  "labels": [
+    "negative",
+    "neutral",
+    "positive"
+  ],
+  "train_examples": 2313,
+  "train_conflict_excluded": 45,
+  "test_examples": 638,
+  "test_conflict_excluded": 16,
+  "test_label_counts": {
+    "positive": 341,
+    "neutral": 169,
+    "negative": 128
+  },
+  "majority_baseline_accuracy": 0.5344827586206896,
+  "selected_model": "logreg",
+  "selection_rule": "Highest mean 5-fold cross-validated macro-F1 on the training split (test split not used for selection).",
+  "models": {
+    "logreg": {
+      "accuracy": 0.731974921630094,
+      "macro_precision": 0.6919046706280749,
+      "macro_recall": 0.7032718625460562,
+      "macro_f1": 0.6831265743108886,
+      "weighted_f1": 0.7285545016556233,
+      "per_class": {
+        "negative": {
+          "precision": 0.5531914893617021,
+          "recall": 0.8125,
+          "f1": 0.6582278481012658,
+          "support": 128
+        },
+        "neutral": {
+          "precision": 0.6666666666666666,
+          "recall": 0.46153846153846156,
+          "f1": 0.5454545454545454,
+          "support": 169
+        },
+        "positive": {
+          "precision": 0.8558558558558559,
+          "recall": 0.8357771260997068,
+          "f1": 0.8456973293768546,
+          "support": 341
+        }
+      },
+      "confusion_matrix": [
+        [
+          104,
+          12,
+          12
+        ],
+        [
+          55,
+          78,
+          36
+        ],
+        [
+          29,
+          27,
+          285
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    negative     0.5532    0.8125    0.6582       128\n     neutral     0.6667    0.4615    0.5455       169\n    positive     0.8559    0.8358    0.8457       341\n\n    accuracy                         0.7320       638\n   macro avg     0.6919    0.7033    0.6831       638\nweighted avg     0.7450    0.7320    0.7286       638\n",
+      "inference_seconds_total": 0.07367230000090785,
+      "inference_ms_per_example": 0.11547382445283362,
+      "n_test": 638,
+      "display_name": "TF-IDF + Logistic Regression",
+      "best_params": {
+        "clf__C": 8.0,
+        "context__clip_clause": true,
+        "context__near": 3,
+        "context__window": 0,
+        "tfidf__transformer_weights": {
+          "context": 1.0,
+          "sentence": 0.5,
+          "aspect": 0.5,
+          "lexicon": 1.0
+        }
+      },
+      "cv_macro_f1_mean": 0.7320891007273725,
+      "cv_macro_f1_std": 0.02134422864172619,
+      "train_seconds": 2.142949700006284,
+      "tuning_seconds": 100.70769169999403
+    },
+    "linsvm": {
+      "accuracy": 0.7335423197492164,
+      "macro_precision": 0.6961779418601894,
+      "macro_recall": 0.6979170733629481,
+      "macro_f1": 0.675805859253609,
+      "weighted_f1": 0.7260990052554797,
+      "per_class": {
+        "negative": {
+          "precision": 0.5412371134020618,
+          "recall": 0.8203125,
+          "f1": 0.6521739130434783,
+          "support": 128
+        },
+        "neutral": {
+          "precision": 0.693069306930693,
+          "recall": 0.41420118343195267,
+          "f1": 0.5185185185185185,
+          "support": 169
+        },
+        "positive": {
+          "precision": 0.8542274052478134,
+          "recall": 0.8592375366568915,
+          "f1": 0.8567251461988304,
+          "support": 341
+        }
+      },
+      "confusion_matrix": [
+        [
+          105,
+          9,
+          14
+        ],
+        [
+          63,
+          70,
+          36
+        ],
+        [
+          26,
+          22,
+          293
+        ]
+      ],
+      "classification_report": "              precision    recall  f1-score   support\n\n    negative     0.5412    0.8203    0.6522       128\n     neutral     0.6931    0.4142    0.5185       169\n    positive     0.8542    0.8592    0.8567       341\n\n    accuracy                         0.7335       638\n   macro avg     0.6962    0.6979    0.6758       638\nweighted avg     0.7487    0.7335    0.7261       638\n",
+      "inference_seconds_total": 0.04515610000817105,
+      "inference_ms_per_example": 0.07077758621970384,
+      "n_test": 638,
+      "display_name": "TF-IDF + Linear SVM",
+      "best_params": {
+        "clf__C": 1.0,
+        "context__clip_clause": true,
+        "context__near": 3,
+        "context__window": 0,
+        "tfidf__transformer_weights": {
+          "context": 1.0,
+          "sentence": 0.5,
+          "aspect": 0.5,
+          "lexicon": 0.5
+        }
+      },
+      "cv_macro_f1_mean": 0.7309606994282312,
+      "cv_macro_f1_std": 0.018416705439475076,
+      "train_seconds": 0.6434682000253815,
+      "tuning_seconds": 24.026578599994536
+    }
+  },
+  "test_best_model": "logreg",
+  "selection_agrees_with_test": true
+}

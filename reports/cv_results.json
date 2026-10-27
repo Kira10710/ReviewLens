@@ -1,0 +1,54 @@
+{
+  "train_examples": 2313,
+  "conflict_excluded": 45,
+  "cv": "StratifiedKFold(n_splits=5, shuffle=True, random_state=42) on training split",
+  "scoring": "f1_macro",
+  "models": {
+    "logreg": {
+      "display_name": "TF-IDF + Logistic Regression",
+      "best_params": {
+        "clf__C": 8.0,
+        "context__clip_clause": true,
+        "context__near": 3,
+        "context__window": 0,
+        "tfidf__transformer_weights": {
+          "context": 1.0,
+          "sentence": 0.5,
+          "aspect": 0.5,
+          "lexicon": 1.0
+        }
+      },
+      "cv_macro_f1_mean": 0.7320891007273725,
+      "cv_macro_f1_std": 0.02134422864172619,
+      "grid_size": 108,
+      "tuning_seconds": 100.70769169999403,
+      "final_fit_seconds": 2.142949700006284,
+      "model_file": "tfidf_logreg.joblib",
+      "vocabulary_size": 30565
+    },
+    "linsvm": {
+      "display_name": "TF-IDF + Linear SVM",
+      "best_params": {
+        "clf__C": 1.0,
+        "context__clip_clause": true,
+        "context__near": 3,
+        "context__window": 0,
+        "tfidf__transformer_weights": {
+          "context": 1.0,
+          "sentence": 0.5,
+          "aspect": 0.5,
+          "lexicon": 0.5
+        }
+      },
+      "cv_macro_f1_mean": 0.7309606994282312,
+      "cv_macro_f1_std": 0.018416705439475076,
+      "grid_size": 108,
+      "tuning_seconds": 24.026578599994536,
+      "final_fit_seconds": 0.6434682000253815,
+      "model_file": "tfidf_linearsvc.joblib",
+      "vocabulary_size": 30565
+    }
+  },
+  "selected_model": "logreg",
+  "selection_rule": "Highest mean 5-fold cross-validated macro-F1 on the training split (test split not used for selection)."
+}
