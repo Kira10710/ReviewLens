@@ -147,8 +147,60 @@ class ReviewSentimentModel:
         return out
 
 
+def resolve_model_path(path: str | Path | None = None) -> Path:
+    """Resolve review sentiment model path against candidate locations and working directories."""
+    if path is not None:
+        p = Path(path)
+        if p.is_absolute() and p.exists():
+            return p
+        if p.exists():
+            return p.resolve()
+        if (config.ROOT / p).exists():
+            return (config.ROOT / p).resolve()
+        if (config.MODELS_DIR / p.name).exists():
+            return (config.MODELS_DIR / p.name).resolve()
+        return p if p.is_absolute() else (config.MODELS_DIR / p.name)
+
+    candidates = [
+        MODEL_FILE,
+        Path.cwd() / "models" / "review_sentiment.joblib",
+        Path(__file__).resolve().parent.parent / "models" / "review_sentiment.joblib",
+    ]
+    for c in candidates:
+        if c.exists():
+            return c.resolve()
+    return MODEL_FILE
+
+
+def model_diagnostics(path: str | Path | None = None) -> dict:
+    """Safe diagnostics for model resolution and filesystem status. Never exposes secrets or contents."""
+    cwd = Path.cwd()
+    root = config.ROOT
+    models_dir = config.MODELS_DIR
+    resolved_path = resolve_model_path(path)
+
+    models_dir_exists = models_dir.exists()
+    files_in_models = []
+    if models_dir_exists:
+        try:
+            files_in_models = sorted([f.name for f in models_dir.iterdir() if f.is_file()])
+        except Exception:
+            files_in_models = []
+
+    return {
+        "cwd": str(cwd),
+        "root": str(root),
+        "models_dir": str(models_dir),
+        "models_dir_exists": models_dir_exists,
+        "model_file": str(resolved_path),
+        "model_file_exists": resolved_path.exists(),
+        "model_file_size": resolved_path.stat().st_size if resolved_path.exists() else None,
+        "files_in_models_dir": files_in_models,
+    }
+
+
 def load_review_model(path: str | Path | None = None) -> ReviewSentimentModel:
-    path = Path(path) if path else MODEL_FILE
+    path = resolve_model_path(path)
     if not path.exists():
         raise ModelNotAvailable(f"Review sentiment model not found at {path}. "
                                 "Train it with `python -m src.sentiment_model`.")
@@ -157,8 +209,11 @@ def load_review_model(path: str | Path | None = None) -> ReviewSentimentModel:
     except Exception as exc:
         raise ModelNotAvailable(f"Could not load {path}: {exc}") from exc
     meta = {}
-    if META_FILE.exists() and path == MODEL_FILE:
-        meta = json.loads(META_FILE.read_text(encoding="utf-8"))
+    meta_path = path.parent / "review_sentiment_meta.json"
+    if not meta_path.exists():
+        meta_path = config.MODELS_DIR / "review_sentiment_meta.json"
+    if meta_path.exists():
+        meta = json.loads(meta_path.read_text(encoding="utf-8"))
     return ReviewSentimentModel(pipeline, meta)
 
 

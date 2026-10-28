@@ -38,10 +38,20 @@ def selected_model_name() -> str:
 
 
 def load_model(name: str | None = None, path: str | Path | None = None):
-    path = Path(path) if path else config.MODEL_FILES[name or selected_model_name()]
-    if not path.exists():
-        raise ModelNotAvailable(f"Model file not found: {path}. Run `python -m src.train`.")
-    return joblib.load(path)
+    target = Path(path) if path else config.MODEL_FILES[name or selected_model_name()]
+    if not target.exists():
+        candidates = [
+            config.ROOT / target if not target.is_absolute() else target,
+            Path.cwd() / "models" / target.name,
+            config.MODELS_DIR / target.name,
+        ]
+        for c in candidates:
+            if c.exists():
+                target = c.resolve()
+                break
+    if not target.exists():
+        raise ModelNotAvailable(f"Model file not found: {target}. Run `python -m src.train`.")
+    return joblib.load(target)
 
 
 def overall_label(sentiments: list[str]) -> str:

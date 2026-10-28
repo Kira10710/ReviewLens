@@ -105,12 +105,20 @@ def load_json(path):
 
 
 @st.cache_resource(show_spinner="Loading models...")
+def _load_analyzers_cached():
+    from src.pipeline import load_analyzers
+    return load_analyzers()
+
+
 def get_models():
     """Return ((sentiment_model, aspect_analyzer), None) or (None, error message)."""
     try:
-        from src.pipeline import load_analyzers
-        return load_analyzers(), None
+        return _load_analyzers_cached(), None
     except Exception as exc:
+        try:
+            _load_analyzers_cached.clear()
+        except Exception:
+            pass
         return None, str(exc)
 
 
@@ -829,6 +837,23 @@ def sidebar_status():
     st.markdown(f'<div class="rl-sec">Status</div><div class="rl-status">{html_rows}</div>', unsafe_allow_html=True)
     if model_err:
         st.error(f"Model problem: {model_err}")
+        with st.expander("Model diagnostics", expanded=False):
+            from src.sentiment_model import model_diagnostics
+            d = model_diagnostics()
+            st.markdown(f"**CWD:** `{d['cwd']}`  \n"
+                        f"**Root:** `{d['root']}`  \n"
+                        f"**Model path:** `{d['model_file']}`  \n"
+                        f"**File exists:** `{'yes' if d['model_file_exists'] else 'no'}`")
+            if d.get("model_file_size"):
+                st.caption(f"File size: {d['model_file_size']:,} bytes")
+            if d.get("files_in_models_dir"):
+                st.caption(f"Files in models/: {', '.join(d['files_in_models_dir'])}")
+            if st.button("Retry loading models", key="retry_models_btn"):
+                try:
+                    _load_analyzers_cached.clear()
+                except Exception:
+                    pass
+                st.rerun()
 
 
 with st.sidebar:
